@@ -119,6 +119,8 @@ Citizen.CreateThread(function()
 
                         FreezeEntityPosition(veh, true)
                         tempSpawnedCars[id] = veh
+                        TaskWarpPedIntoVehicle(GetPlayerPed(-1),veh, -1)
+
                     end)
                 elseif dst > 100 and tempSpawnedCars[id] then
                     DeleteEntity(tempSpawnedCars[id])
